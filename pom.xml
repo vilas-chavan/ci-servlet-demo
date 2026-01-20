@@ -60,5 +60,6 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<build>1</build>
+		<sonar.organization>vilas-chavan</sonar.organization>
 	</properties>
 </project>
