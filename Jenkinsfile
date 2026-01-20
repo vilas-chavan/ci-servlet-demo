@@ -16,7 +16,7 @@ pipeline {
                 SONAR_TOKEN = credentials('SONAR_TOKEN')
             }
             steps {
-                bat "mvn sonar:sonar -Dsonar.projectKey=vilas-chavan_project1 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}"
+                bat "mvn sonar:sonar -Dsonar.projectKey=vilas-chavan-ST1 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}"
             }   
         } 
         stage('Build') {
