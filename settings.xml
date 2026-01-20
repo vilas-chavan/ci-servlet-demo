@@ -2,6 +2,8 @@
   <localRepository />
   <interactiveMode />
   <offline />
+  <pluginGroups>
+    <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
   <pluginGroups />
   <servers>
     <server>
@@ -15,3 +17,4 @@
   <profiles />
   <activeProfiles />
 </settings>
+
