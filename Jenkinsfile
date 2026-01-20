@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                bat "mvn clean compile"
+                sh "mvn clean compile"
             }
         }
         stage('SonarQube Analysis') {
@@ -16,12 +16,12 @@ pipeline {
                 SONAR_TOKEN = credentials('SONAR_TOKEN')
             }
             steps {
-                bat "mvn sonar:sonar -Dsonar.projectKey=vilas-chavan-ST1 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}"
+                sh "mvn sonar:sonar -Dsonar.projectKey=vilas-chavan-ST1 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}"
             }   
         } 
         stage('Build') {
             steps {
-                bat "mvn clean package"
+                sh "mvn clean package"
             }
 
             post {
